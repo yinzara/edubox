@@ -1,0 +1,73 @@
+# EduBox Docker Image - Simplified Version
+FROM debian:bullseye-slim
+
+# Metadata
+LABEL maintainer="edubox@example.com"
+LABEL description="EduBox - Offline Education Platform"
+LABEL version="1.0"
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    nginx \
+    wget \
+    sqlite3 \
+    supervisor \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create edubox user
+RUN useradd -m -s /bin/bash edubox
+
+# Create directory structure
+RUN mkdir -p /opt/edubox/{content,logs,config,backup,portal} \
+    && chown -R edubox:edubox /opt/edubox
+
+# Copy application files
+COPY --chown=edubox:edubox install.sh /opt/edubox/
+COPY --chown=edubox:edubox impact_tracker.py /opt/edubox/
+COPY --chown=edubox:edubox portal/ /opt/edubox/portal/
+
+# Install Python requirements for impact tracker
+RUN pip3 install flask
+
+# Install Kiwix tools with proper architecture handling
+RUN cd /tmp \
+    && ARCH=$(dpkg --print-architecture) \
+    && case $ARCH in \
+        amd64) KIWIX_ARCH="x86_64" ;; \
+        arm64|aarch64) KIWIX_ARCH="aarch64" ;; \
+        armhf) KIWIX_ARCH="armhf" ;; \
+        *) echo "Unsupported architecture: $ARCH" && exit 1 ;; \
+    esac \
+    && echo "Downloading kiwix-tools for $KIWIX_ARCH" \
+    && wget https://download.kiwix.org/release/kiwix-tools/kiwix-tools_linux-${KIWIX_ARCH}.tar.gz \
+    && tar -xzf kiwix-tools*.tar.gz \
+    && cp kiwix-tools*/kiwix-serve /usr/local/bin/ \
+    && rm -rf kiwix-tools* \
+    && chmod +x /usr/local/bin/kiwix-serve
+
+# Configure nginx
+COPY docker/nginx-simple.conf /etc/nginx/sites-available/edubox
+RUN ln -sf /etc/nginx/sites-available/edubox /etc/nginx/sites-enabled/default
+
+# Configure supervisor
+COPY docker/supervisord-simple.conf /etc/supervisor/conf.d/edubox.conf
+
+# Expose ports
+EXPOSE 80 8080
+
+# Volume for content
+VOLUME ["/opt/edubox/content", "/opt/edubox/logs", "/opt/edubox/backup"]
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost/ || exit 1
+
+# Copy and set entrypoint script
+COPY docker/entrypoint-simple.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]

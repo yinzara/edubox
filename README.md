@@ -42,6 +42,53 @@ EduBox is a $100 solar-powered education server that provides:
 - Support 40+ languages
 - Create local job opportunities for maintenance
 
+## 🚀 Quick Start
+
+### 🐳 Using Docker (Recommended)
+
+#### Docker Compose (Easiest)
+```bash
+# Clone the repository
+git clone https://github.com/yinzara/edubox.git
+cd edubox
+
+# Build and start EduBox
+docker-compose up -d
+
+# Access the portal
+open http://localhost
+```
+
+#### Docker Run
+```bash
+# Build the image
+docker build -t edubox:latest .
+
+# Run the container
+docker run -d \
+  --name edubox \
+  -p 80:80 \
+  -v $(pwd)/content:/opt/edubox/content \
+  -v $(pwd)/logs:/opt/edubox/logs \
+  edubox:latest
+```
+
+#### Adding Educational Content
+1. Download ZIM files from [Kiwix Library](https://download.kiwix.org/zim/)
+2. Place files in the `content/` directory
+3. Restart the container: `docker restart edubox`
+
+Recommended starter content:
+- [Simple English Wikipedia](https://download.kiwix.org/zim/wikipedia/) (~200MB)
+- [Khan Academy](https://download.kiwix.org/zim/khan-academy-videos/)
+- [Project Gutenberg Books](https://download.kiwix.org/zim/gutenberg/)
+
+### 🔧 Manual Installation (Raspberry Pi)
+```bash
+# Download and run the installer
+curl -fsSL https://raw.githubusercontent.com/yinzara/edubox/main/install.sh | bash
+```
+
 ## Getting Started
 1. [Build Your Own EduBox](docs/build-guide.md)
 2. [Deploy in Your Community](docs/deployment-guide.md)
