@@ -7,7 +7,7 @@ services:
   edubox:
     build:
       context: .
-      dockerfile: Dockerfile.simple  # Using simplified version by default
+      dockerfile: Dockerfile
     container_name: edubox
     ports:
       - "80:80"     # Main web interface
