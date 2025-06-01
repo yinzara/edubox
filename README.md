@@ -105,10 +105,10 @@ docker-compose down && docker-compose build --no-cache && docker-compose up -d
 ### 🌐 Access Points
 
 - **Main Portal**: http://localhost/
-- **Wikipedia/Kiwix**: http://localhost:8080/
+- **Wikipedia/Kiwix**: http://localhost/wikipedia/ (or http://localhost:8080/)
 - **Content Browser**: http://localhost/content/
 
-**Note**: For the best Wikipedia experience, always use port 8080 directly.
+**Note**: Wikipedia is accessible through both the reverse proxy at `/wikipedia/` and directly on port 8080.
 
 ## Getting Started
 1. [Build Your Own EduBox](docs/build-guide.md)

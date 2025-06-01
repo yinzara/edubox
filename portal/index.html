@@ -32,17 +32,6 @@
             margin: 0 auto;
             padding: 2rem;
         }
-        .alert {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-        .alert h3 {
-            margin-bottom: 0.5rem;
-        }
         .resources {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,17 +115,11 @@
     </div>
     
     <div class="container">
-        <div class="alert">
-            <h3>📚 Wikipedia is Available!</h3>
-            <p>Access Wikipedia directly at: <a href="http://localhost:8080" target="_blank"><strong>http://localhost:8080</strong></a></p>
-            <p>For the best experience, we recommend using the direct link above rather than the /wikipedia/ path.</p>
-        </div>
-        
         <div class="resources">
-            <a href="http://localhost:8080" target="_blank" class="resource-card">
+            <a href="/wikipedia/" class="resource-card">
                 <h2><span class="icon">📚</span> Wikipedia</h2>
                 <p>Access the world's largest encyclopedia offline in multiple languages</p>
-                <span class="status available">Available on Port 8080</span>
+                <span class="status available">Available</span>
             </a>
             
             <a href="/content/" class="resource-card">
@@ -191,8 +174,8 @@
             
             <h3 style="margin-top: 1.5rem;">Access Points:</h3>
             <ul>
-                <li><strong>Main Portal:</strong> http://localhost/ (this page)</li>
-                <li><strong>Wikipedia/Kiwix:</strong> http://localhost:8080/</li>
+                <li><strong>Main Portal:</strong> http://localhost/</li>
+                <li><strong>Wikipedia:</strong> http://localhost/wikipedia/ (or direct at http://localhost:8080/)</li>
                 <li><strong>Content Browser:</strong> http://localhost/content/</li>
             </ul>
         </div>
