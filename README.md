@@ -89,6 +89,18 @@ Recommended starter content:
 curl -fsSL https://raw.githubusercontent.com/yinzara/edubox/main/install.sh | bash
 ```
 
+### 🛠️ Troubleshooting
+
+**Port 80 not accessible?**
+If you built the container before June 1, 2025, run:
+```bash
+./fix-nginx.sh
+```
+Then rebuild for a permanent fix:
+```bash
+docker-compose down && docker-compose build --no-cache && docker-compose up -d
+```
+
 ## Getting Started
 1. [Build Your Own EduBox](docs/build-guide.md)
 2. [Deploy in Your Community](docs/deployment-guide.md)
