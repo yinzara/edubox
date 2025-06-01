@@ -9,6 +9,57 @@ echo "EduBox Installation Script v1.0"
 echo "======================================"
 echo
 
+# Check for Docker installation option
+if command -v docker &> /dev/null && command -v docker-compose &> /dev/null; then
+    echo "Docker detected! Would you like to use Docker installation? (recommended) [Y/n]"
+    read -r response
+    if [[ "$response" != "n" ]] && [[ "$response" != "N" ]]; then
+        echo
+        echo "Installing EduBox with Docker..."
+        echo
+        
+        # Clone repository if not already in it
+        if [ ! -f "docker-compose.yml" ]; then
+            echo "Cloning EduBox repository..."
+            git clone https://github.com/yinzara/edubox.git
+            cd edubox
+        fi
+        
+        # Create necessary directories
+        mkdir -p content logs backup
+        
+        # Build and start with docker-compose
+        echo "Building Docker image..."
+        docker-compose build
+        
+        echo "Starting EduBox..."
+        docker-compose up -d
+        
+        echo
+        echo "======================================"
+        echo "✅ EduBox Docker Installation Complete!"
+        echo "======================================"
+        echo
+        echo "Access the portal at: http://localhost"
+        echo
+        echo "To add educational content:"
+        echo "1. Download ZIM files from https://download.kiwix.org/zim/"
+        echo "2. Place them in the content/ directory"
+        echo "3. Restart: docker-compose restart"
+        echo
+        echo "Useful commands:"
+        echo "  docker-compose logs -f     # View logs"
+        echo "  docker-compose down        # Stop EduBox"
+        echo "  docker-compose restart     # Restart EduBox"
+        echo "  docker-compose ps          # Check status"
+        echo
+        exit 0
+    fi
+fi
+
+echo "Proceeding with manual installation..."
+echo
+
 # Check if running on Raspberry Pi
 if [ ! -f /proc/cpuinfo ] || ! grep -q "Raspberry Pi" /proc/cpuinfo; then
     echo "Warning: This script is optimized for Raspberry Pi"
