@@ -26,7 +26,7 @@ RUN ARCH=$(dpkg --print-architecture) && \
 FROM debian:bullseye-slim
 
 # Metadata
-LABEL maintainer="edubox@example.com"
+LABEL maintainer="edubox@edubox.global"
 LABEL description="EduBox - Offline Education Platform"
 LABEL version="2.0"
 

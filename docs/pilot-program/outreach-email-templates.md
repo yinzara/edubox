@@ -42,8 +42,8 @@ Looking forward to potentially working together to transform education in [Count
 
 Best regards,
 [Your Name]
-EduBox Pilot Program
-pilots@edubox.org
+EduBox Initiative Pilot Program
+pilots@edubox.global
 
 ---
 
@@ -85,7 +85,7 @@ Would you be available for a brief call this week? I'm happy to work around your
 
 Warm regards,
 [Your Name]
-EduBox Pilot Program
+EduBox Initiative Pilot Program
 
 P.S. I've attached a one-page overview and FAQ document. Feel free to share with your teachers!
 
@@ -132,7 +132,7 @@ Could we arrange a meeting to discuss how EduBox could support [Country]'s educa
 
 Respectfully,
 [Your Name]
-EduBox Project Lead
+EduBox Initiative Lead
 
 Attachments:
 - Executive Brief
@@ -186,7 +186,7 @@ I'd welcome the opportunity to present how EduBox could amplify [Company]'s soci
 Best regards,
 [Your Name]
 Strategic Partnerships
-EduBox Project
+EduBox Initiative
 
 ---
 
