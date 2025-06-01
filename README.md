@@ -77,6 +77,7 @@ docker run -d \
 1. Download ZIM files from [Kiwix Library](https://download.kiwix.org/zim/)
 2. Place files in the `content/` directory
 3. Restart the container: `docker restart edubox`
+4. Access Wikipedia directly at http://localhost:8080
 
 Recommended starter content:
 - [Simple English Wikipedia](https://download.kiwix.org/zim/wikipedia/) (~200MB)
@@ -100,6 +101,14 @@ Then rebuild for a permanent fix:
 ```bash
 docker-compose down && docker-compose build --no-cache && docker-compose up -d
 ```
+
+### 🌐 Access Points
+
+- **Main Portal**: http://localhost/
+- **Wikipedia/Kiwix**: http://localhost:8080/
+- **Content Browser**: http://localhost/content/
+
+**Note**: For the best Wikipedia experience, always use port 8080 directly.
 
 ## Getting Started
 1. [Build Your Own EduBox](docs/build-guide.md)
