@@ -68,8 +68,8 @@ COPY docker/nginx.conf /etc/nginx/sites-available/edubox
 COPY docker/supervisord.conf /etc/supervisor/conf.d/edubox.conf
 
 # Set up nginx
-RUN ln -sf /etc/nginx/sites-available/edubox /etc/nginx/sites-enabled/default && \
-    rm -f /etc/nginx/sites-enabled/default
+RUN rm -f /etc/nginx/sites-enabled/default && \
+    ln -sf /etc/nginx/sites-available/edubox /etc/nginx/sites-enabled/edubox
 
 # Copy and set up entrypoint script
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
