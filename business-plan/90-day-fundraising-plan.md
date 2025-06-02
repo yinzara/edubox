@@ -13,33 +13,35 @@ This plan provides specific, actionable steps for board members to raise initial
 *Goal: Set up donation infrastructure*
 
 ### Day 1-3: Payment Processing
-**Option A: Stripe Nonprofit**
-- Apply at stripe.com/nonprofits
-- 2.2% + $0.30 per transaction (discounted)
+**Primary: Zeffy (ZERO FEES!)**
+- Apply at zeffy.com
+- 0% transaction fees for nonprofits
+- 100% of donations go to EduBox
 - Instant approval with EIN
-- Integrates with everything
+- Beautiful donation forms
+- Recurring donations supported
+- Tax receipts automated
+- Mobile optimized
 
-**Option B: PayPal Nonprofit**
-- Apply at paypal.com/nonprofits
-- 2.2% + $0.30 per transaction
-- Widely recognized
-- Easy donate buttons
-
-**Option C: Both**
-- Maximize donor preferences
-- A/B test conversion rates
+**Backup: PayPal Giving Fund**
+- As secondary option only
+- For donors who prefer PayPal
+- Still has fees but widely trusted
 
 ### Day 4-5: Website Setup
-**Free Website Options**
-1. **WordPress.com** (free plan)
-   - eduboxglobal.wordpress.com
-   - Add donation button
-   - Basic pages ready
+**GitHub Pages with Custom Domain**
+- Uses existing repo (already have!)
+- Custom domain: edubox.global (already owned!)
+- Completely free hosting
+- Full control over design
+- Easy updates via Git
+- SSL certificate included
 
-2. **GitHub Pages** (free)
-   - Uses existing repo
-   - Custom domain ($12/year)
-   - Full control
+**Setup Steps:**
+1. Create `docs/` folder in repo
+2. Enable GitHub Pages
+3. Point edubox.global to GitHub
+4. Add CNAME file
 
 **Essential Pages**
 - Home (mission + donate button)
@@ -63,16 +65,24 @@ This plan provides specific, actionable steps for board members to raise initial
 - Donate link in all bios
 
 ### Day 8-10: Email System
-**Free Options**
-- Mailchimp (free to 500 contacts)
-- SendinBlue (300 emails/day free)
-- ConvertKit (free to 300 subscribers)
+**Google Workspace for Nonprofits (FREE)**
+- Apply at google.com/nonprofits
+- Professional @edubox.global emails
+- Unlimited users
+- 30GB storage per user
+- Google Meet included
+- Shared drives for documents
 
-**Setup**
-- Welcome email series
-- Donation receipt template
-- Monthly newsletter template
-- Board member signatures
+**Email Addresses to Create:**
+- info@edubox.global (general)
+- donate@edubox.global (donations)
+- volunteer@edubox.global (volunteers)
+- board@edubox.global (board communications)
+- [yourname]@edubox.global (personal)
+
+**Email Marketing:**
+- Use Google Groups for newsletters
+- Or integrate Mailchimp (free tier)
 
 ### Day 11-14: Legal Compliance
 - [ ] Charitable solicitation registration (if required in state)
@@ -418,4 +428,4 @@ Join us → [link]*
 
 **Let's do this!** 💪
 
-*Questions? fundraising@edubox.global*
+*Questions? donate@edubox.global*
