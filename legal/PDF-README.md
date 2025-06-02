@@ -2,88 +2,93 @@
 
 This directory contains tools to convert the legal Markdown documents to PDF format.
 
-## Files Generated
+## ✅ All PDFs Successfully Generated!
 
-All legal documents have been converted to HTML format in the `legal/pdf/` directory. These HTML files include professional styling and can be easily converted to PDF.
+All 10 legal documents have been converted to PDF format and are available in the `legal/pdf/` directory:
 
-## How to Create PDFs
+1. Articles of Incorporation (139K)
+2. Board Member Agreement (153K)
+3. Corporate Bylaws (160K)
+4. Conflict of Interest Policy (142K)
+5. EIN Application Guide (165K)
+6. Financial Policies and Procedures (208K)
+7. Form 1023 Eligibility Worksheet (169K)
+8. Initial Board Resolution (143K)
+9. Mission, Vision, and Values (168K)
+10. Nonprofit Formation Status (198K)
 
-Since your system doesn't have a LaTeX installation, the documents have been converted to HTML. You have several options to create PDFs:
+## PDF Generation Scripts
 
-### Option 1: Browser Print-to-PDF (Recommended)
-1. Open any HTML file in your browser:
-   ```bash
-   open legal/pdf/articles-of-incorporation.html
-   ```
-2. Press `Cmd+P` (Mac) or `Ctrl+P` (PC) to open print dialog
-3. Select "Save as PDF" as the destination
-4. Ensure margins are set to 1 inch
-5. Save the PDF
+We have several scripts for different scenarios:
 
-### Option 2: Install a PDF Engine
-Install one of these tools to enable direct PDF generation:
+### 1. **generate-legal-pdfs-unicode.sh** (Recommended)
+- Uses XeLaTeX for full Unicode support (handles emojis)
+- Falls back to pdflatex with emoji removal if needed
+- Works with BasicTeX installation
+- **Usage**: `./generate-legal-pdfs-unicode.sh [filename]`
 
-**On Mac:**
+### 2. **generate-legal-pdfs-basictex.sh**
+- Specifically configured for BasicTeX
+- Adds `/Library/TeX/texbin` to PATH
+- Handles most documents well
+- **Usage**: `./generate-legal-pdfs-basictex.sh [filename]`
+
+### 3. **generate-legal-pdfs-html.sh**
+- Creates HTML files that can be printed to PDF
+- Works without any LaTeX installation
+- **Usage**: `./generate-legal-pdfs-html.sh [filename]`
+
+### 4. **generate-legal-pdfs.sh** & **generate-legal-pdfs-simple.sh**
+- Original scripts requiring full LaTeX installation
+- Kept for compatibility
+
+## Requirements
+
+- **Pandoc**: Document converter (required for all scripts)
+- **BasicTeX or MacTeX**: For direct PDF generation
+  - BasicTeX (smaller): `brew install --cask basictex`
+  - MacTeX (full): `brew install --cask mactex`
+
+## Usage
+
+### Convert All Documents
 ```bash
-# Option A: wkhtmltopdf (recommended)
-brew install --cask wkhtmltopdf
-
-# Option B: weasyprint
-pip3 install weasyprint
-
-# Option C: Install BasicTeX for LaTeX support
-brew install --cask basictex
+./generate-legal-pdfs-unicode.sh
 ```
 
-After installing, run the appropriate script again:
+### Convert Single Document
 ```bash
-./generate-legal-pdfs.sh          # If you installed LaTeX
-./generate-legal-pdfs-html.sh     # If you installed wkhtmltopdf or weasyprint
+./generate-legal-pdfs-unicode.sh bylaws
 ```
 
-## Available Scripts
-
-1. **generate-legal-pdfs.sh** - Full-featured script (requires LaTeX)
-2. **generate-legal-pdfs-simple.sh** - Basic script (requires LaTeX)
-3. **generate-legal-pdfs-html.sh** - HTML-based script (works without LaTeX)
-
-## Document List
-
-The following documents are available:
-- Articles of Incorporation
-- Corporate Bylaws  
-- Mission, Vision, and Values
-- Conflict of Interest Policy
-- Financial Policies and Procedures
-- Board Member Agreement
-- Initial Board Resolution
-- Form 1023 Eligibility Worksheet
-- EIN Application Guide
-- Nonprofit Formation Status
-
-## Styling
-
-The HTML files use professional legal document styling with:
-- Letter-size pages with 1-inch margins
-- Times New Roman body text
-- Arial headings
-- Proper spacing and formatting for legal documents
-- Print-optimized CSS
-
-## Regenerating Documents
-
-To regenerate after making changes to the Markdown files:
+### View All PDFs
 ```bash
-./generate-legal-pdfs-html.sh
+open legal/pdf/
 ```
 
-To convert a single document:
+### View Specific PDF
 ```bash
-./generate-legal-pdfs-html.sh bylaws
+open legal/pdf/articles-of-incorporation.pdf
 ```
 
 ## Notes
 
 - PDFs are excluded from Git via .gitignore
-- Review all documents before using officially
+- All documents use professional legal formatting
+- Documents include table of contents where appropriate
+- Review all documents before official use
 - Consider having a lawyer review before filing
+
+## Troubleshooting
+
+### "pdflatex not found"
+- Restart your terminal after installing BasicTeX
+- Or add to PATH: `export PATH="/Library/TeX/texbin:$PATH"`
+
+### Unicode/Emoji Errors
+- Use the `generate-legal-pdfs-unicode.sh` script
+- It automatically handles emojis using XeLaTeX
+
+### Failed Conversions
+- Check for special characters in the markdown
+- Try the HTML generation method as a fallback
