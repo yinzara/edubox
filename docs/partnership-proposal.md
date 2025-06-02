@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-EduBox is an open-source initiative to bring quality education to the 258.4 million children worldwide who lack access to schools and internet connectivity. Using a $100 solar-powered device, we can provide complete offline access to world-class educational content.
+EduBox is an open-source initiative to bring quality education to the 258.4 million children worldwide who lack access to schools and internet connectivity. Using a $100 low-cost device, we can provide complete offline access to world-class educational content.
 
 ## The Problem
 

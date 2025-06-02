@@ -5,7 +5,7 @@
 
 ## OUR MISSION
 
-**To democratize education by providing free, offline digital learning resources to underserved children worldwide through innovative solar-powered technology, empowering communities to break the cycle of poverty through accessible, quality education.**
+**To democratize education by providing free, offline digital learning resources to underserved children worldwide through innovative low-cost technology, empowering communities to break the cycle of poverty through accessible, quality education.**
 
 ---
 
@@ -33,7 +33,7 @@ We believe in the power of collective intelligence. All our technology, content 
 True change happens at the local level. We equip communities with tools and training to become self-sufficient in managing their educational technology.
 
 ### 4. **Sustainability**
-Our solutions are designed to last. Solar-powered, low-maintenance technology ensures communities can sustain educational access for years without external support.
+Our solutions are designed to last. Low-cost, low-maintenance technology ensures communities can sustain educational access for years without external support.
 
 ### 5. **Collaboration Over Competition**
 We actively partner with governments, NGOs, educators, and technology companies. Together, we can achieve more than any organization working alone.
@@ -49,7 +49,7 @@ Education is not one-size-fits-all. We respect and incorporate local languages, 
 ## THEORY OF CHANGE
 
 **If we provide**:
-- Affordable, solar-powered educational technology
+- Affordable, low-cost educational technology
 - Comprehensive offline digital content
 - Teacher training and community support
 - Sustainable maintenance models
@@ -130,7 +130,7 @@ We define success through:
 
 The EduBox Global Initiative is more than a nonprofit - it's a movement to ensure that geography and poverty no longer determine a child's educational destiny. 
 
-Together, we can light up minds around the world, one solar-powered classroom at a time.
+Together, we can light up minds around the world, one classroom at a time.
 
 **"Education is the most powerful weapon which you can use to change the world."** - Nelson Mandela
 

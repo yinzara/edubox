@@ -64,7 +64,7 @@ The Pilot School agrees to:
 
 ### 4.1 Infrastructure & Security
 - Provide secure location for EduBox installation
-- Ensure basic power availability (or suitable location for solar)
+- Ensure basic power availability for the device
 - Implement reasonable security measures
 - Allow access for installation and maintenance
 

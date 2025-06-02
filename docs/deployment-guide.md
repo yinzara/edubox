@@ -5,7 +5,7 @@
 ### What You'll Need
 - Raspberry Pi 4 (4GB RAM recommended)
 - MicroSD card (64GB minimum)
-- Solar panel kit (20W) or power adapter
+- Power adapter or battery backup solution
 - WiFi antenna (optional, for extended range)
 - Weatherproof case (for outdoor installations)
 
@@ -50,15 +50,15 @@ wget https://download.kiwix.org/zim/wikipedia/wikipedia_fr_all_maxi_2024-01.zim
 sudo mv *.zim /opt/edubox/content/
 ```
 
-### Step 4: Solar Power Setup (Optional)
+### Step 4: Power Solutions
 
 For areas without reliable electricity:
 
-1. Connect solar panel to charge controller
-2. Connect battery to charge controller
-3. Connect Raspberry Pi power to battery output
-4. Mount solar panel facing south (northern hemisphere) or north (southern hemisphere)
-5. Ensure battery capacity can run Pi for 12+ hours
+1. Use a UPS (Uninterruptible Power Supply) for battery backup
+2. Consider car batteries with appropriate inverters
+3. Generator power with surge protection
+4. Ensure battery capacity can run Pi for 12+ hours
+5. Always use proper voltage regulation
 
 ## Deployment Scenarios
 
@@ -113,7 +113,7 @@ For areas without reliable electricity:
 - Update content if internet available
 - Backup user progress data
 - Clean temporary files
-- Check solar battery levels
+- Check battery levels (if using backup power)
 
 ### Monthly
 - Full system backup

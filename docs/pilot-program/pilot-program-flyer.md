@@ -3,7 +3,7 @@
 ## Bring World-Class Digital Education to Your Students - No Internet Required!
 
 ### 🎯 What is EduBox?
-A $100 solar-powered education server that gives 500+ students access to:
+A $100 education server that gives 500+ students access to:
 - ✅ Complete Khan Academy K-12 curriculum  
 - ✅ Wikipedia (6 million articles)
 - ✅ Thousands of educational videos
@@ -71,7 +71,7 @@ Based on similar programs:
 ✓ Serving underserved community?  
 ✓ 100-500 students?  
 ✓ Committed school leadership?  
-✓ Basic power (or suitable for solar)?  
+✓ Basic power availability?  
 ✓ Enthusiasm for innovation?
 
 **If you checked 3+ boxes, we want to hear from you!**

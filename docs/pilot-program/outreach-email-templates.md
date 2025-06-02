@@ -12,7 +12,7 @@ I hope this email finds you well. I'm reaching out regarding an exciting opportu
 Many schools in [Country/Region] lack reliable internet access, limiting students' access to digital learning resources that could transform their educational outcomes.
 
 **Our Solution - EduBox:**
-EduBox is a $100 solar-powered education server that works completely offline, providing:
+EduBox is a $100 education server that works completely offline, providing:
 - Complete K-12 curriculum from Khan Academy
 - Wikipedia in multiple languages
 - Thousands of educational videos

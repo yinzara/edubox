@@ -1,10 +1,10 @@
 # EduBox: Open-Source Offline Education Platform
 
 ## Mission
-Bring quality education to the 258.4 million children worldwide who lack access to schools and internet, using low-cost, solar-powered technology.
+Bring quality education to the 258.4 million children worldwide who lack access to schools and internet, using low-cost, sustainable technology.
 
 ## What is EduBox?
-EduBox is a $100 solar-powered education server that provides:
+EduBox is a $100 education server that provides:
 - Complete offline access to Khan Academy (via KA Lite)
 - Wikipedia in multiple languages
 - Educational videos and interactive content
@@ -13,18 +13,18 @@ EduBox is a $100 solar-powered education server that provides:
 - Works with any WiFi-enabled device (phones, tablets, old laptops)
 
 ## Key Features
-- **Cost**: Under $100 including solar panel
+- **Cost**: Under $100 complete system
 - **Capacity**: Serves 500+ students simultaneously
 - **Content**: 50GB+ of curated educational materials
 - **Languages**: Supports 40+ languages
-- **Power**: Runs on solar power or battery
+- **Power**: Low power consumption, flexible power options
 - **Updates**: Content can be updated via USB when internet is available
 
 ## Hardware Requirements
 - Raspberry Pi 4 (4GB RAM): $55
 - 64GB microSD card: $10
-- Solar panel (20W) + battery: $25
-- WiFi antenna (extended range): $5
+- Power supply/battery backup: $20
+- WiFi antenna (extended range): $10
 - Weatherproof case: $5
 - **Total: ~$100**
 

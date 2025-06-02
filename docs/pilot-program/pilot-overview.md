@@ -4,7 +4,7 @@
 
 ### What is EduBox?
 
-EduBox is a revolutionary $100 solar-powered education server that brings world-class digital learning resources to schools without reliable internet. One device can serve 500+ students with:
+EduBox is a revolutionary $100 education server that brings world-class digital learning resources to schools without reliable internet. One device can serve 500+ students with:
 
 - **Khan Academy** - Complete K-12 curriculum in math, science, and more
 - **Wikipedia** - 6 million articles in multiple languages
@@ -88,7 +88,7 @@ EduBox is a revolutionary $100 solar-powered education server that brings world-
 
 2. **Infrastructure**
    - Secure location for EduBox
-   - Basic electrical connection (or roof for solar)
+   - Basic electrical connection
    - Gathering space for training
    - Student devices (tablets/phones/computers)
 

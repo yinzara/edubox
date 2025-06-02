@@ -31,7 +31,7 @@
 **A:** EduBox uses very little power (like a light bulb). Options include:
 - Regular electrical outlet
 - Solar panel kit (included for schools without reliable electricity)
-- Existing solar/battery systems
+- Existing backup power systems
 - Can run 8-10 hours on a small battery
 
 ### Q: How much space does it need?
